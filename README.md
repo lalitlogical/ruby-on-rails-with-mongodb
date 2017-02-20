@@ -2,16 +2,17 @@
 
 You can create a Rails project with help of MongoDB easily.
 
-Installation of MongoDB on Mac
+# Installation of MongoDB on Mac
 https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-os-x/
 
-Starting the MongoDB Server
+# Starting the MongoDB Server
 mongod
 
-Mongodb Data Directory Permissions
+# Mongodb Data Directory Permissions
 http://stackoverflow.com/questions/5973811/mongodb-data-directory-permissions
 sudo chmod 777 /data/db
 
+# Create a Rails Project
 1. Create your Rails project with the '--skip-active-record' switch.
 
 rails new mongodb_example --skip-active-record
