@@ -1,25 +1,25 @@
-# README
+# Ruby on Rails with MongoDB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You can create a Rails project with help of MongoDB easily.
 
-Things you may want to cover:
+Installation of MongoDB on Mac
+https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-os-x/
 
-* Ruby version
+Starting the MongoDB Server
+mongod
 
-* System dependencies
+Mongodb Data Directory Permissions
+http://stackoverflow.com/questions/5973811/mongodb-data-directory-permissions
+sudo chmod 777 /data/db
 
-* Configuration
+1. Create your Rails project with the '--skip-active-record' switch.
 
-* Database creation
+rails new mongodb_example --skip-active-record
 
-* Database initialization
+2. Remove sqlite3 from your Gemfile (if present), add Mongoid to your Gemfile, and run 'bundle'.
 
-* How to run the test suite
+gem 'mongoid', '~> 6.0.0'
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Run 'rails g mongoid:config'.
 
-* Deployment instructions
-
-* ...
-# ruby-on-rails-with-mongodb
+4. Mongoid is ready to go. The Rails generators for 'model', 'scaffold' etc have been overridden by Mongoid. Any models, scaffolds etc that you create will create classes that include the Mongoid::Document module instead of inheriting from ApplicationRecord in the models folder.
