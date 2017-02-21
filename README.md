@@ -20,7 +20,7 @@ sudo chmod 777 /data/db
 1. Create your Rails project with the '--skip-active-record' switch.
 
 ```
-rails new mongodb_example --skip-active-record
+rails new ruby-on-rails-with-mongodb --skip-active-record
 ```
 
 2. Remove sqlite3 from your Gemfile (if present), add Mongoid to your Gemfile, and run 'bundle'.
